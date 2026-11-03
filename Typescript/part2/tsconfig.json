@@ -1,0 +1,15 @@
+{
+  
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "module": "nodenext",
+    "target": "esnext",
+
+    "lib": ["esnext"],
+    "strict": true,
+
+  }
+}
