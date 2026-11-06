@@ -24,3 +24,5 @@ type Member = { id: number; role: "member"; plans: string[] };
 type User = Admin | Member;
 
 const user: User = { id: 123, role: "member", plans: ["abc", "def"] };
+
+

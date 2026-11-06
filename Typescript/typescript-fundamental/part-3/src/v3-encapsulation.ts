@@ -33,3 +33,5 @@ const employee = new Employee("Mir", 22000);
 const employee2 = new Employee("Mizan", 24000);
 
 console.log(employee.baseSalary);
+
+
