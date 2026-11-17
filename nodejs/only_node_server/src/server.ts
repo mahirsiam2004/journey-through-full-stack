@@ -1,4 +1,5 @@
 import { createServer, IncomingMessage, Server, ServerResponse } from "http";
+import routeHandler from "./routes/route";
 
 const server: Server = createServer(
   (req: IncomingMessage, res: ServerResponse) => {
@@ -6,13 +7,8 @@ const server: Server = createServer(
     console.log(req.url);
     console.log(req.method);
 
-    const url = req.url;
-    const method = req.method;
-    if (url === "/" && method === "GET") {
-      console.log("this is root layout ");
-    } else {
-
-    }
+    routeHandler(req,res);
+   
   },
 );
 
