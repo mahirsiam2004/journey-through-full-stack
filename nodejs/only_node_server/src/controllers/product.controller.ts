@@ -1,5 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "http";
 import { url } from "inspector";
+import { productService } from "../services/product.service";
 
 const productController = (req: IncomingMessage, res: ServerResponse) => {
   const url = req.url;
@@ -18,7 +19,7 @@ const productController = (req: IncomingMessage, res: ServerResponse) => {
         price: 40,
       },
     ];
-
+    productService();
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(
       JSON.stringify({
