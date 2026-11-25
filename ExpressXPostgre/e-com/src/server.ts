@@ -1,11 +1,12 @@
 import app from "./app";
 import config from "./config";
-import { initDB } from "./db";
+import { createTables, initDB } from "./db";
 
 const main =async () =>{
 
 try{
     await initDB()
+    await createTables();
     app.listen(config.port, ()=>{
         console.log(`Server is running on port : ${config.port}`,)
     })
